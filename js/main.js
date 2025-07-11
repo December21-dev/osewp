@@ -3,47 +3,9 @@ let currentLanguage = 'zh';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
-    loadCommonComponents();
     initializeLanguage();
     setupEventListeners();
 });
-
-// Load common components (header and footer)
-async function loadCommonComponents() {
-    try {
-        // Load header
-        const headerResponse = await fetch('includes/header.html');
-        if (headerResponse.ok) {
-            const headerContent = await headerResponse.text();
-            const headerPlaceholder = document.getElementById('header-placeholder');
-            if (headerPlaceholder) {
-                headerPlaceholder.outerHTML = headerContent;
-                
-                // Show back button for non-home pages after header is loaded
-                setTimeout(() => {
-                    const currentPath = window.location.pathname;
-                    const isHomePage = currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('/');
-                    const backBtn = document.querySelector('.back-btn');
-                    if (backBtn && !isHomePage) {
-                        backBtn.style.display = 'flex';
-                    }
-                }, 100);
-            }
-        }
-
-        // Load footer
-        const footerResponse = await fetch('includes/footer.html');
-        if (footerResponse.ok) {
-            const footerContent = await footerResponse.text();
-            const footerPlaceholder = document.getElementById('footer-placeholder');
-            if (footerPlaceholder) {
-                footerPlaceholder.outerHTML = footerContent;
-            }
-        }
-    } catch (error) {
-        console.error('Error loading common components:', error);
-    }
-}
 
 // Initialize language system
 function initializeLanguage() {
