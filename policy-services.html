@@ -9,38 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-left">
-                    <div class="foundation-logo">
-                        <a href="https://chancefoundation.org.cn/" target="_blank" title="天工开物基金会">
-                            <img src="images/chance-foundation-logo.png" alt="天工开物基金会" class="foundation-logo-img">
-                            <span class="foundation-name" data-zh="天工开物基金会" data-en="Chance Foundation">天工开物基金会</span>
-                        </a>
-                    </div>
-                    <div class="nav-separator"></div>
-                    <div class="nav-logo">
-                        <a href="index.html">
-                            <h1 data-zh="开源生态服务白皮书" data-en="Open Source Ecosystem Services White Paper">开源生态服务白皮书</h1>
-                        </a>
-                    </div>
-                </div>
-                <div class="nav-controls">
-                    <a href="index.html" class="back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        <span data-zh="返回首页" data-en="Back to Home">返回首页</span>
-                    </a>
-                    <button class="lang-switch" onclick="toggleLanguage()">
-                        <span id="lang-text">EN</span>
-                    </button>
-                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
     <main class="service-page">
         <section class="service-hero">
             <div class="container">
@@ -84,32 +53,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4 data-zh="关于项目" data-en="About Project">关于项目</h4>
-                    <p data-zh="开源生态服务白皮书致力于汇集和整理开源生态中的各类服务资源" data-en="The Open Source Ecosystem Services White Paper is dedicated to collecting and organizing various service resources in the open source ecosystem">开源生态服务白皮书致力于汇集和整理开源生态中的各类服务资源</p>
-                </div>
-                <div class="footer-section">
-                    <h4 data-zh="联系我们" data-en="Contact Us">联系我们</h4>
-                    <p>
-                        <a href="https://github.com/chancefoundation/osewp" target="_blank">
-                            <i class="fab fa-github"></i>
-                            <span data-zh="GitHub 仓库" data-en="GitHub Repository">GitHub 仓库</span>
-                        </a>
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h4 data-zh="许可证" data-en="License">许可证</h4>
-                    <p data-zh="本项目采用 MIT 许可证开源" data-en="This project is open sourced under MIT License">本项目采用 MIT 许可证开源</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 <span data-zh="开源生态服务白皮书" data-en="Open Source Ecosystem Services White Paper">开源生态服务白皮书</span></p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
     <script src="js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
