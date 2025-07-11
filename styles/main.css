@@ -29,6 +29,8 @@ body {
 
 .navbar {
     padding: 1rem 0;
+    background: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-container {
@@ -63,7 +65,7 @@ body {
 }
 
 .foundation-logo a:hover {
-    background-color: #f8f9fa;
+    background-color: rgba(255,255,255,0.1);
 }
 
 .foundation-logo-img {
@@ -77,13 +79,13 @@ body {
 .foundation-name {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #2c5aa0;
+    color: #ffffff;
 }
 
 .nav-separator {
     width: 1px;
     height: 30px;
-    background-color: #e9ecef;
+    background-color: rgba(255,255,255,0.2);
     margin: 0 0.5rem;
 }
 
@@ -97,7 +99,7 @@ body {
 }
 
 .nav-logo h1 {
-    color: #2c5aa0;
+    color: #ffffff;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -129,7 +131,7 @@ body {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #2c5aa0;
+    color: #ffffff;
 }
 
 /* Hero Section */
