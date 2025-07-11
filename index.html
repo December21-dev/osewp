@@ -13,7 +13,9 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <h1 data-zh="开源生态服务白皮书" data-en="Open Source Ecosystem Services White Paper">开源生态服务白皮书</h1>
+                    <a href="index.html">
+                        <h1 data-zh="开源生态服务白皮书" data-en="Open Source Ecosystem Services White Paper">开源生态服务白皮书</h1>
+                    </a>
                 </div>
                 <div class="nav-controls">
                     <button class="lang-switch" onclick="toggleLanguage()">
@@ -67,57 +69,42 @@
             <div class="container">
                 <h3 data-zh="服务类别" data-en="Service Categories">服务类别</h3>
                 <div class="services-grid">
-                    <div class="service-card" onclick="loadServiceContent('basic-training')">
+                    <a href="basic-training.html" class="service-card">
                         <i class="fas fa-chalkboard-teacher"></i>
                         <h4 data-zh="基础培训" data-en="Basic Training">基础培训</h4>
                         <p data-zh="开源技术和最佳实践培训" data-en="Open source technology and best practices training">开源技术和最佳实践培训</p>
-                    </div>
-                    <div class="service-card" onclick="loadServiceContent('community-services')">
+                    </a>
+                    <a href="community-services.html" class="service-card">
                         <i class="fas fa-hands-helping"></i>
                         <h4 data-zh="社区服务" data-en="Community Services">社区服务</h4>
                         <p data-zh="社区建设和运营支持服务" data-en="Community building and operational support services">社区建设和运营支持服务</p>
-                    </div>
-                    <div class="service-card" onclick="loadServiceContent('technical-services')">
+                    </a>
+                    <a href="technical-services.html" class="service-card">
                         <i class="fas fa-cogs"></i>
                         <h4 data-zh="技术服务" data-en="Technical Services">技术服务</h4>
                         <p data-zh="技术开发和架构咨询服务" data-en="Technical development and architecture consulting services">技术开发和架构咨询服务</p>
-                    </div>
-                    <div class="service-card" onclick="loadServiceContent('legal-services')">
+                    </a>
+                    <a href="legal-services.html" class="service-card">
                         <i class="fas fa-balance-scale"></i>
                         <h4 data-zh="法务服务" data-en="Legal Services">法务服务</h4>
                         <p data-zh="开源许可证和法律合规服务" data-en="Open source licensing and legal compliance services">开源许可证和法律合规服务</p>
-                    </div>
-                    <div class="service-card" onclick="loadServiceContent('business-services')">
+                    </a>
+                    <a href="business-services.html" class="service-card">
                         <i class="fas fa-briefcase"></i>
                         <h4 data-zh="商业服务" data-en="Business Services">商业服务</h4>
                         <p data-zh="商业化策略和市场推广服务" data-en="Commercialization strategy and marketing services">商业化策略和市场推广服务</p>
-                    </div>
-                    <div class="service-card" onclick="loadServiceContent('talent-services')">
+                    </a>
+                    <a href="talent-services.html" class="service-card">
                         <i class="fas fa-user-tie"></i>
                         <h4 data-zh="人才服务" data-en="Talent Services">人才服务</h4>
                         <p data-zh="人才招聘和培养服务" data-en="Talent recruitment and development services">人才招聘和培养服务</p>
-                    </div>
-                    <div class="service-card" onclick="loadServiceContent('policy-services')">
+                    </a>
+                    <a href="policy-services.html" class="service-card">
                         <i class="fas fa-file-contract"></i>
                         <h4 data-zh="政策服务" data-en="Policy Services">政策服务</h4>
                         <p data-zh="政策解读和申报指导服务" data-en="Policy interpretation and application guidance services">政策解读和申报指导服务</p>
-                    </div>
-                </div>
-            </div>
+                    </a>
         </section>
-
-        <!-- Service Content Modal -->
-        <div id="service-modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 id="modal-title"></h3>
-                    <span class="close" onclick="closeModal()">&times;</span>
-                </div>
-                <div class="modal-body" id="modal-body">
-                    <!-- Content will be loaded dynamically -->
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer class="footer">

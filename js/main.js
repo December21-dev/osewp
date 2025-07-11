@@ -1,6 +1,5 @@
 // Language management
 let currentLanguage = 'zh';
-const translations = {};
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,28 +33,30 @@ function updateLanguageDisplay() {
     
     // Update language button
     const langButton = document.getElementById('lang-text');
-    langButton.textContent = currentLanguage === 'zh' ? 'EN' : '中文';
+    if (langButton) {
+        langButton.textContent = currentLanguage === 'zh' ? 'EN' : '中文';
+    }
     
     // Update HTML lang attribute
     document.documentElement.lang = currentLanguage === 'zh' ? 'zh-CN' : 'en';
+    
+    // Update page title
+    const titleElement = document.querySelector('title[data-zh][data-en]');
+    if (titleElement) {
+        const title = currentLanguage === 'zh' ? titleElement.getAttribute('data-zh') : titleElement.getAttribute('data-en');
+        document.title = title;
+    }
+    
+    // Reload service content if on service page
+    const serviceContent = document.getElementById('service-content');
+    if (serviceContent && window.currentServiceType) {
+        loadServicePageContent(window.currentServiceType);
+    }
 }
 
 // Setup event listeners
 function setupEventListeners() {
-    // Close modal when clicking outside
-    window.addEventListener('click', function(event) {
-        const modal = document.getElementById('service-modal');
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeModal();
-        }
-    });
+    // Any additional event listeners can be added here
 }
 
 // Mobile menu toggle
@@ -64,31 +65,32 @@ function toggleMobileMenu() {
     console.log('Mobile menu toggled');
 }
 
-// Load service content
-async function loadServiceContent(serviceType) {
-    const modal = document.getElementById('service-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalBody = document.getElementById('modal-body');
+// Load service content for service pages
+async function loadServicePageContent(serviceType) {
+    window.currentServiceType = serviceType;
+    const contentContainer = document.getElementById('service-content');
+    
+    if (!contentContainer) return;
     
     // Show loading
-    modalBody.innerHTML = '<div class="loading"></div>';
-    modal.style.display = 'block';
+    contentContainer.innerHTML = `
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>${currentLanguage === 'zh' ? '加载中...' : 'Loading...'}</p>
+        </div>
+    `;
     
     try {
         const response = await fetch(`services/${serviceType}-${currentLanguage}.md`);
         if (response.ok) {
             const content = await response.text();
-            modalBody.innerHTML = parseMarkdown(content);
+            contentContainer.innerHTML = `<div class="markdown-content">${parseMarkdown(content)}</div>`;
         } else {
-            modalBody.innerHTML = getDefaultServiceContent(serviceType);
+            contentContainer.innerHTML = `<div class="markdown-content">${getDefaultServiceContent(serviceType)}</div>`;
         }
-        
-        // Set title
-        modalTitle.textContent = getServiceTitle(serviceType);
     } catch (error) {
         console.error('Error loading service content:', error);
-        modalBody.innerHTML = getDefaultServiceContent(serviceType);
-        modalTitle.textContent = getServiceTitle(serviceType);
+        contentContainer.innerHTML = `<div class="markdown-content">${getDefaultServiceContent(serviceType)}</div>`;
     }
 }
 
@@ -133,89 +135,51 @@ function getDefaultServiceContent(serviceType) {
     const defaultContent = {
         'basic-training': {
             'zh': `
-                <h4>免费服务</h4>
+                <h1>基础培训服务</h1>
+                <h2>免费服务</h2>
+                <h3>在线教程和资源</h3>
                 <ul>
-                    <li>开源软件开发基础教程</li>
-                    <li>Git 版本控制培训</li>
-                    <li>开源许可证介绍</li>
-                    <li>开源社区参与指南</li>
+                    <li><strong>GitHub 官方文档</strong> - Git 和 GitHub 基础教程</li>
+                    <li><strong>开源指南</strong> - GitHub 提供的开源参与指南</li>
+                    <li><strong>Linux 基金会免费课程</strong> - 开源软件开发基础</li>
+                    <li><strong>Coursera 开源课程</strong> - 多个大学提供的免费开源相关课程</li>
+                    <li><strong>freeCodeCamp</strong> - 免费的编程和开源开发教程</li>
                 </ul>
-                <h4>开源项目</h4>
+                <h2>开源项目</h2>
                 <ul>
-                    <li>各类开源学习资源汇总</li>
-                    <li>开源培训教材项目</li>
-                    <li>在线学习平台</li>
+                    <li><strong>First Contributions</strong> - 帮助新手完成第一次开源贡献</li>
+                    <li><strong>Good First Issues</strong> - 汇集适合新手的开源项目</li>
+                    <li><strong>Awesome Lists</strong> - 各种技术领域的资源清单</li>
                 </ul>
-                <h4>商业服务</h4>
+                <h2>商业服务</h2>
                 <ul>
-                    <li>企业级开源培训定制</li>
-                    <li>专业认证培训</li>
-                    <li>开源技术咨询</li>
-                </ul>
-            `,
-            'en': `
-                <h4>Free Services</h4>
-                <ul>
-                    <li>Basic tutorials for open source software development</li>
-                    <li>Git version control training</li>
-                    <li>Introduction to open source licenses</li>
-                    <li>Guide to participating in open source communities</li>
-                </ul>
-                <h4>Open Source Projects</h4>
-                <ul>
-                    <li>Collection of various open source learning resources</li>
-                    <li>Open source training material projects</li>
-                    <li>Online learning platforms</li>
-                </ul>
-                <h4>Commercial Services</h4>
-                <ul>
-                    <li>Customized enterprise-level open source training</li>
-                    <li>Professional certification training</li>
-                    <li>Open source technology consulting</li>
-                </ul>
-            `
-        },
-        'community-services': {
-            'zh': `
-                <h4>免费服务</h4>
-                <ul>
-                    <li>开源社区建设指南</li>
-                    <li>社区活动组织支持</li>
-                    <li>开源贡献者激励机制</li>
-                    <li>社区治理最佳实践</li>
-                </ul>
-                <h4>开源项目</h4>
-                <ul>
-                    <li>社区管理工具</li>
-                    <li>开源协作平台</li>
-                    <li>社区分析工具</li>
-                </ul>
-                <h4>商业服务</h4>
-                <ul>
-                    <li>专业社区运营服务</li>
-                    <li>社区策略咨询</li>
-                    <li>企业开源社区建设</li>
+                    <li><strong>红帽培训</strong> - 企业级开源技术培训</li>
+                    <li><strong>SUSE 培训中心</strong> - Linux 和开源解决方案培训</li>
+                    <li><strong>华为开源培训</strong> - 企业开源实践培训</li>
                 </ul>
             `,
             'en': `
-                <h4>Free Services</h4>
+                <h1>Basic Training Services</h1>
+                <h2>Free Services</h2>
+                <h3>Online Tutorials and Resources</h3>
                 <ul>
-                    <li>Open source community building guide</li>
-                    <li>Community event organization support</li>
-                    <li>Contributor incentive mechanisms</li>
-                    <li>Community governance best practices</li>
+                    <li><strong>GitHub Official Documentation</strong> - Git and GitHub basic tutorials</li>
+                    <li><strong>Open Source Guides</strong> - GitHub's guide to participating in open source</li>
+                    <li><strong>Linux Foundation Free Courses</strong> - Basics of open source software development</li>
+                    <li><strong>Coursera Open Source Courses</strong> - Free open source related courses from multiple universities</li>
+                    <li><strong>freeCodeCamp</strong> - Free programming and open source development tutorials</li>
                 </ul>
-                <h4>Open Source Projects</h4>
+                <h2>Open Source Projects</h2>
                 <ul>
-                    <li>Community management tools</li>
-                    <li>Open source collaboration platforms</li>
-                    <li>Community analytics tools</li>
+                    <li><strong>First Contributions</strong> - Helping newcomers make their first open source contribution</li>
+                    <li><strong>Good First Issues</strong> - Collection of beginner-friendly open source projects</li>
+                    <li><strong>Awesome Lists</strong> - Resource lists for various technology domains</li>
                 </ul>
-                <h4>Commercial Services</h4>
+                <h2>Commercial Services</h2>
                 <ul>
-                    <li>Professional community operations services</li>
-                    <li>Community strategy consulting</li>
-                    <li>Enterprise open source community building</li>
+                    <li><strong>Red Hat Training</strong> - Enterprise-level open source technology training</li>
+                    <li><strong>SUSE Training Center</strong> - Linux and open source solution training</li>
+                    <li><strong>Huawei Open Source Training</strong> - Enterprise open source practice training</li>
                 </ul>
             `
         }
@@ -229,34 +193,42 @@ function getDefaultServiceContent(serviceType) {
 function parseMarkdown(markdown) {
     let html = markdown
         // Headers
-        .replace(/^### (.*$)/gim, '<h4>$1</h4>')
-        .replace(/^## (.*$)/gim, '<h3>$1</h3>')
-        .replace(/^# (.*$)/gim, '<h2>$1</h2>')
+        .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+        .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+        .replace(/^# (.*$)/gim, '<h1>$1</h1>')
         // Bold
-        .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
-        // Italic
-        .replace(/\*(.*)\*/gim, '<em>$1</em>')
+        .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+        // Italic  
+        .replace(/\*(.*?)\*/gim, '<em>$1</em>')
         // Links
         .replace(/\[([^\]]*)\]\(([^\)]*)\)/gim, '<a href="$2" target="_blank">$1</a>')
         // Line breaks
+        .replace(/\n\n/gim, '</p><p>')
         .replace(/\n/gim, '<br>');
     
     // Convert lists
-    html = html.replace(/^[\-\*\+] (.*)$/gim, '<li>$1</li>');
-    html = html.replace(/(<li>.*<\/li>)/gis, '<ul>$1</ul>');
+    html = html.replace(/^- (.*)$/gim, '<li>$1</li>');
+    
+    // Group consecutive list items into ul tags
+    html = html.replace(/(<li>.*?<\/li>)(\s*<br>\s*<li>.*?<\/li>)*/gis, function(match) {
+        return '<ul>' + match.replace(/<br>\s*/gim, '') + '</ul>';
+    });
+    
+    // Wrap in paragraphs
+    if (!html.startsWith('<h1>') && !html.startsWith('<h2>') && !html.startsWith('<ul>')) {
+        html = '<p>' + html + '</p>';
+    }
+    
+    // Clean up
+    html = html.replace(/(<br>\s*){3,}/gim, '<br><br>');
+    html = html.replace(/<p><\/p>/gim, '');
     
     return html;
 }
 
-// Close modal
-function closeModal() {
-    const modal = document.getElementById('service-modal');
-    modal.style.display = 'none';
-}
-
 // Smooth scrolling for anchor links
 document.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
+    if (e.target.tagName === 'A' && e.target.getAttribute('href') && e.target.getAttribute('href').startsWith('#')) {
         e.preventDefault();
         const targetId = e.target.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
