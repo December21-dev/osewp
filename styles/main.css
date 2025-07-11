@@ -181,11 +181,16 @@ body {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid #e9ecef;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .stage-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
 }
 
 .stage-card i {
@@ -216,6 +221,101 @@ body {
     margin-bottom: 3rem;
     font-size: 2rem;
     color: #2c5aa0;
+}
+
+/* Overview Section */
+.overview-section {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+.overview-section h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #2c5aa0;
+}
+
+.overview-section > .container > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.overview-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2c5aa0, #667eea);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-color: #2c5aa0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.overview-card:hover::before {
+    transform: scaleX(1);
+}
+
+.overview-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.overview-card .card-header i {
+    font-size: 2.5rem;
+    color: #2c5aa0;
+    flex-shrink: 0;
+}
+
+.overview-card .card-header h4 {
+    margin: 0;
+    color: #2c5aa0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.overview-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .services-grid {
@@ -541,8 +641,23 @@ body {
     }
     
     .stages-grid,
-    .services-grid {
+    .services-grid,
+    .overview-cards {
         grid-template-columns: 1fr;
+    }
+    
+    .overview-card .card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .overview-card .card-header i {
+        font-size: 2rem;
+    }
+    
+    .overview-card .card-header h4 {
+        font-size: 1.2rem;
     }
     
     .modal-content {
