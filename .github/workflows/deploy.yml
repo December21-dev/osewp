@@ -45,6 +45,8 @@ jobs:
           cp -r styles dist/ 2>/dev/null || true
           cp -r js dist/ 2>/dev/null || true
           cp -r services dist/ 2>/dev/null || true
+          cp -r images dist/ 2>/dev/null || true
+          cp favicon.ico dist/ 2>/dev/null || true
           
           # Create CNAME file for custom domain
           echo "osewp.chancefoundation.org.cn" > dist/CNAME
