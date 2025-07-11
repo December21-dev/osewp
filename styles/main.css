@@ -40,6 +40,52 @@ body {
     align-items: center;
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.foundation-logo {
+    display: flex;
+    align-items: center;
+}
+
+.foundation-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.foundation-logo a:hover {
+    background-color: #f8f9fa;
+}
+
+.foundation-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.foundation-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #2c5aa0;
+}
+
+.nav-separator {
+    width: 1px;
+    height: 30px;
+    background-color: #e9ecef;
+    margin: 0 0.5rem;
+}
+
 .nav-logo a {
     text-decoration: none;
     color: inherit;
@@ -459,6 +505,30 @@ body {
         display: block;
     }
     
+    .nav-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-width: 0;
+    }
+    
+    .foundation-name {
+        display: none;
+    }
+    
+    .nav-logo h1 {
+        font-size: 1.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .nav-separator {
+        height: 20px;
+        margin: 0 0.25rem;
+    }
+    
     .hero-content h2 {
         font-size: 2rem;
     }
@@ -488,8 +558,27 @@ body {
 }
 
 @media (max-width: 480px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .nav-left {
+        gap: 0.25rem;
+        min-width: 0;
+        flex: 1;
+    }
+    
+    .foundation-logo-img {
+        width: 24px;
+        height: 24px;
+    }
+    
     .nav-logo h1 {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .nav-separator {
+        display: none;
     }
     
     .hero {
