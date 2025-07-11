@@ -1,0 +1,35 @@
+{
+  "name": "osewp",
+  "version": "1.0.0",
+  "description": "Open Source Ecosystem Services White Paper | 开源生态服务白皮书",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 8080 -o",
+    "build": "echo 'Building static site...' && mkdir -p dist && cp -r *.html styles js services dist/ 2>/dev/null || true",
+    "serve": "http-server . -p 8080",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "open-source",
+    "ecosystem",
+    "services",
+    "white-paper",
+    "开源",
+    "生态",
+    "服务",
+    "白皮书"
+  ],
+  "author": "Chance Foundation",
+  "license": "MIT",
+  "homepage": "https://osewp.chancefoundation.org.cn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chancefoundation/osewp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chancefoundation/osewp/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

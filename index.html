@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开源生态服务白皮书 | Open Source Ecosystem Services White Paper</title>
+    <meta name="description" content="汇集众多对于开源生态有帮助的服务，包括免费服务、开源项目与商业服务 | A collection of services helpful to the open source ecosystem">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1 data-zh="开源生态服务白皮书" data-en="Open Source Ecosystem Services White Paper">开源生态服务白皮书</h1>
+                </div>
+                <div class="nav-controls">
+                    <button class="lang-switch" onclick="toggleLanguage()">
+                        <span id="lang-text">EN</span>
+                    </button>
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h2 data-zh="汇集开源生态服务资源" data-en="Aggregating Open Source Ecosystem Service Resources">汇集开源生态服务资源</h2>
+                <p data-zh="为不同阶段的开源项目提供全方位服务支持" data-en="Providing comprehensive service support for open source projects at different stages">为不同阶段的开源项目提供全方位服务支持</p>
+            </div>
+        </section>
+
+        <section class="stages-section">
+            <div class="container">
+                <h3 data-zh="开源发展阶段" data-en="Open Source Development Stages">开源发展阶段</h3>
+                <div class="stages-grid">
+                    <div class="stage-card">
+                        <i class="fas fa-user"></i>
+                        <h4 data-zh="个人开源" data-en="Individual Open Source">个人开源</h4>
+                        <p data-zh="个人开发者的开源项目起步阶段" data-en="Starting stage for individual developers' open source projects">个人开发者的开源项目起步阶段</p>
+                    </div>
+                    <div class="stage-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4 data-zh="学术开源" data-en="Academic Open Source">学术开源</h4>
+                        <p data-zh="学术机构和研究项目的开源实践" data-en="Open source practices in academic institutions and research projects">学术机构和研究项目的开源实践</p>
+                    </div>
+                    <div class="stage-card">
+                        <i class="fas fa-users"></i>
+                        <h4 data-zh="社区开源" data-en="Community Open Source">社区开源</h4>
+                        <p data-zh="社区驱动的协作开发模式" data-en="Community-driven collaborative development model">社区驱动的协作开发模式</p>
+                    </div>
+                    <div class="stage-card">
+                        <i class="fas fa-building"></i>
+                        <h4 data-zh="商业开源" data-en="Commercial Open Source">商业开源</h4>
+                        <p data-zh="企业级开源项目和商业化运营" data-en="Enterprise-level open source projects and commercial operations">企业级开源项目和商业化运营</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                <h3 data-zh="服务类别" data-en="Service Categories">服务类别</h3>
+                <div class="services-grid">
+                    <div class="service-card" onclick="loadServiceContent('basic-training')">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4 data-zh="基础培训" data-en="Basic Training">基础培训</h4>
+                        <p data-zh="开源技术和最佳实践培训" data-en="Open source technology and best practices training">开源技术和最佳实践培训</p>
+                    </div>
+                    <div class="service-card" onclick="loadServiceContent('community-services')">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4 data-zh="社区服务" data-en="Community Services">社区服务</h4>
+                        <p data-zh="社区建设和运营支持服务" data-en="Community building and operational support services">社区建设和运营支持服务</p>
+                    </div>
+                    <div class="service-card" onclick="loadServiceContent('technical-services')">
+                        <i class="fas fa-cogs"></i>
+                        <h4 data-zh="技术服务" data-en="Technical Services">技术服务</h4>
+                        <p data-zh="技术开发和架构咨询服务" data-en="Technical development and architecture consulting services">技术开发和架构咨询服务</p>
+                    </div>
+                    <div class="service-card" onclick="loadServiceContent('legal-services')">
+                        <i class="fas fa-balance-scale"></i>
+                        <h4 data-zh="法务服务" data-en="Legal Services">法务服务</h4>
+                        <p data-zh="开源许可证和法律合规服务" data-en="Open source licensing and legal compliance services">开源许可证和法律合规服务</p>
+                    </div>
+                    <div class="service-card" onclick="loadServiceContent('business-services')">
+                        <i class="fas fa-briefcase"></i>
+                        <h4 data-zh="商业服务" data-en="Business Services">商业服务</h4>
+                        <p data-zh="商业化策略和市场推广服务" data-en="Commercialization strategy and marketing services">商业化策略和市场推广服务</p>
+                    </div>
+                    <div class="service-card" onclick="loadServiceContent('talent-services')">
+                        <i class="fas fa-user-tie"></i>
+                        <h4 data-zh="人才服务" data-en="Talent Services">人才服务</h4>
+                        <p data-zh="人才招聘和培养服务" data-en="Talent recruitment and development services">人才招聘和培养服务</p>
+                    </div>
+                    <div class="service-card" onclick="loadServiceContent('policy-services')">
+                        <i class="fas fa-file-contract"></i>
+                        <h4 data-zh="政策服务" data-en="Policy Services">政策服务</h4>
+                        <p data-zh="政策解读和申报指导服务" data-en="Policy interpretation and application guidance services">政策解读和申报指导服务</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Content Modal -->
+        <div id="service-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title"></h3>
+                    <span class="close" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-zh="关于项目" data-en="About Project">关于项目</h4>
+                    <p data-zh="开源生态服务白皮书致力于汇集和整理开源生态中的各类服务资源" data-en="The Open Source Ecosystem Services White Paper is dedicated to collecting and organizing various service resources in the open source ecosystem">开源生态服务白皮书致力于汇集和整理开源生态中的各类服务资源</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-zh="联系我们" data-en="Contact Us">联系我们</h4>
+                    <p>
+                        <a href="https://github.com/chancefoundation/osewp" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span data-zh="GitHub 仓库" data-en="GitHub Repository">GitHub 仓库</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-zh="许可证" data-en="License">许可证</h4>
+                    <p data-zh="本项目采用 MIT 许可证开源" data-en="This project is open sourced under MIT License">本项目采用 MIT 许可证开源</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span data-zh="开源生态服务白皮书" data-en="Open Source Ecosystem Services White Paper">开源生态服务白皮书</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
