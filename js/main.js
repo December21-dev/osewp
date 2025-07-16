@@ -192,12 +192,14 @@ function getDefaultServiceContent(serviceType) {
 // Simple markdown parser for basic formatting
 function parseMarkdown(markdown) {
     let html = markdown;
+    let tableMap = new Map();
+    let tableIndex = 0;
     
     // Convert images first (before links to avoid conflicts)
     html = html.replace(/!\[([^\]]*)\]\(([^\)]*)\)/gim, '<img src="$2" alt="$1" class="markdown-image">');
     
-    // Convert tables
-    html = convertTables(html);
+    // Convert tables and replace with placeholders to avoid line break issues
+    html = convertTablesWithPlaceholders(html, tableMap);
     
     // Headers
     html = html
@@ -232,6 +234,11 @@ function parseMarkdown(markdown) {
         return '<ol>' + match.replace(/<br>\s*/gim, '').replace(/<li-ol>/gim, '<li>').replace(/<\/li-ol>/gim, '</li>') + '</ol>';
     });
     
+    // Restore tables from placeholders
+    tableMap.forEach((tableHtml, placeholder) => {
+        html = html.replace(placeholder, tableHtml);
+    });
+    
     // Wrap in paragraphs
     if (!html.startsWith('<h1>') && !html.startsWith('<h2>') && !html.startsWith('<ul>') && !html.startsWith('<ol>') && !html.startsWith('<table>')) {
         html = '<p>' + html + '</p>';
@@ -244,13 +251,14 @@ function parseMarkdown(markdown) {
     return html;
 }
 
-// Helper function to convert markdown tables to HTML
-function convertTables(markdown) {
+// Helper function to convert markdown tables to HTML with placeholders
+function convertTablesWithPlaceholders(markdown, tableMap) {
     // Split markdown by lines
     const lines = markdown.split('\n');
     let result = [];
     let inTable = false;
     let tableRows = [];
+    let tableIndex = 0;
     
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
@@ -271,8 +279,12 @@ function convertTables(markdown) {
         } else {
             // Not a table row
             if (inTable) {
-                // End of table, convert to HTML
-                result.push(convertTableRowsToHTML(tableRows));
+                // End of table, convert to HTML and create placeholder
+                const tableHtml = convertTableRowsToHTML(tableRows);
+                const placeholder = `__TABLE_PLACEHOLDER_${tableIndex}__`;
+                tableMap.set(placeholder, tableHtml);
+                result.push(placeholder);
+                tableIndex++;
                 inTable = false;
                 tableRows = [];
             }
@@ -282,7 +294,10 @@ function convertTables(markdown) {
     
     // Handle case where markdown ends with a table
     if (inTable && tableRows.length > 0) {
-        result.push(convertTableRowsToHTML(tableRows));
+        const tableHtml = convertTableRowsToHTML(tableRows);
+        const placeholder = `__TABLE_PLACEHOLDER_${tableIndex}__`;
+        tableMap.set(placeholder, tableHtml);
+        result.push(placeholder);
     }
     
     return result.join('\n');
@@ -292,26 +307,27 @@ function convertTables(markdown) {
 function convertTableRowsToHTML(rows) {
     if (rows.length === 0) return '';
     
-    let html = '<table class="markdown-table">\n';
+    // Create table HTML without internal line breaks to avoid <br> tag issues
+    let html = '<table class="markdown-table">';
     
     // First row is header
-    html += '  <thead>\n    <tr>\n';
+    html += '<thead><tr>';
     for (const cell of rows[0]) {
-        html += `      <th>${cell}</th>\n`;
+        html += `<th>${cell}</th>`;
     }
-    html += '    </tr>\n  </thead>\n';
+    html += '</tr></thead>';
     
     // Remaining rows are body
     if (rows.length > 1) {
-        html += '  <tbody>\n';
+        html += '<tbody>';
         for (let i = 1; i < rows.length; i++) {
-            html += '    <tr>\n';
+            html += '<tr>';
             for (const cell of rows[i]) {
-                html += `      <td>${cell}</td>\n`;
+                html += `<td>${cell}</td>`;
             }
-            html += '    </tr>\n';
+            html += '</tr>';
         }
-        html += '  </tbody>\n';
+        html += '</tbody>';
     }
     
     html += '</table>';
