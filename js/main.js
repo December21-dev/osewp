@@ -191,8 +191,20 @@ function getDefaultServiceContent(serviceType) {
 
 // Simple markdown parser for basic formatting
 function parseMarkdown(markdown) {
-    let html = markdown
-        // Headers
+    let html = markdown;
+    let tableMap = new Map();
+    let tableIndex = 0;
+    
+    // Convert images first (before links to avoid conflicts)
+    html = html.replace(/!\[([^\]]*)\]\(([^\)]*)\)/gim, '<img src="$2" alt="$1" class="markdown-image">');
+    
+    // Convert tables and replace with placeholders to avoid line break issues
+    html = convertTablesWithPlaceholders(html, tableMap);
+    
+    // Headers
+    html = html
+        .replace(/^##### (.*$)/gim, '<h5>$1</h5>')
+        .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
         .replace(/^### (.*$)/gim, '<h3>$1</h3>')
         .replace(/^## (.*$)/gim, '<h2>$1</h2>')
         .replace(/^# (.*$)/gim, '<h1>$1</h1>')
@@ -206,16 +218,29 @@ function parseMarkdown(markdown) {
         .replace(/\n\n/gim, '</p><p>')
         .replace(/\n/gim, '<br>');
     
-    // Convert lists
+    // Convert unordered lists
     html = html.replace(/^- (.*)$/gim, '<li>$1</li>');
     
-    // Group consecutive list items into ul tags
+    // Convert ordered lists
+    html = html.replace(/^\d+\. (.*)$/gim, '<li-ol>$1</li-ol>');
+    
+    // Group consecutive unordered list items into ul tags
     html = html.replace(/(<li>.*?<\/li>)(\s*<br>\s*<li>.*?<\/li>)*/gis, function(match) {
         return '<ul>' + match.replace(/<br>\s*/gim, '') + '</ul>';
     });
     
+    // Group consecutive ordered list items into ol tags
+    html = html.replace(/(<li-ol>.*?<\/li-ol>)(\s*<br>\s*<li-ol>.*?<\/li-ol>)*/gis, function(match) {
+        return '<ol>' + match.replace(/<br>\s*/gim, '').replace(/<li-ol>/gim, '<li>').replace(/<\/li-ol>/gim, '</li>') + '</ol>';
+    });
+    
+    // Restore tables from placeholders
+    tableMap.forEach((tableHtml, placeholder) => {
+        html = html.replace(placeholder, tableHtml);
+    });
+    
     // Wrap in paragraphs
-    if (!html.startsWith('<h1>') && !html.startsWith('<h2>') && !html.startsWith('<ul>')) {
+    if (!html.startsWith('<h1>') && !html.startsWith('<h2>') && !html.startsWith('<ul>') && !html.startsWith('<ol>') && !html.startsWith('<table>')) {
         html = '<p>' + html + '</p>';
     }
     
@@ -223,6 +248,89 @@ function parseMarkdown(markdown) {
     html = html.replace(/(<br>\s*){3,}/gim, '<br><br>');
     html = html.replace(/<p><\/p>/gim, '');
     
+    return html;
+}
+
+// Helper function to convert markdown tables to HTML with placeholders
+function convertTablesWithPlaceholders(markdown, tableMap) {
+    // Split markdown by lines
+    const lines = markdown.split('\n');
+    let result = [];
+    let inTable = false;
+    let tableRows = [];
+    let tableIndex = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        
+        // Check if this line is a table row (contains | and isn't just separators)
+        if (line.includes('|') && !line.match(/^\s*\|?\s*[-:]+\s*\|/)) {
+            if (!inTable) {
+                inTable = true;
+                tableRows = [];
+            }
+            
+            // Parse table row
+            const cells = line.split('|').map(cell => cell.trim()).filter(cell => cell !== '');
+            tableRows.push(cells);
+        } else if (line.match(/^\s*\|?\s*[-:]+\s*\|/)) {
+            // This is a table separator line, skip it
+            continue;
+        } else {
+            // Not a table row
+            if (inTable) {
+                // End of table, convert to HTML and create placeholder
+                const tableHtml = convertTableRowsToHTML(tableRows);
+                const placeholder = `__TABLE_PLACEHOLDER_${tableIndex}__`;
+                tableMap.set(placeholder, tableHtml);
+                result.push(placeholder);
+                tableIndex++;
+                inTable = false;
+                tableRows = [];
+            }
+            result.push(line);
+        }
+    }
+    
+    // Handle case where markdown ends with a table
+    if (inTable && tableRows.length > 0) {
+        const tableHtml = convertTableRowsToHTML(tableRows);
+        const placeholder = `__TABLE_PLACEHOLDER_${tableIndex}__`;
+        tableMap.set(placeholder, tableHtml);
+        result.push(placeholder);
+    }
+    
+    return result.join('\n');
+}
+
+// Helper function to convert table rows array to HTML table
+function convertTableRowsToHTML(rows) {
+    if (rows.length === 0) return '';
+    
+    // Create table HTML without internal line breaks to avoid <br> tag issues
+    let html = '<table class="markdown-table">';
+    
+    // First row is header
+    html += '<thead><tr>';
+    for (const cell of rows[0]) {
+        html += `<th>${cell}</th>`;
+    }
+    html += '</tr></thead>';
+    
+    // Remaining rows are body
+    if (rows.length > 1) {
+        html += '<tbody>';
+        for (let i = 1; i < rows.length; i++) {
+            html += '<tr>';
+            for (const cell of rows[i]) {
+                html += `<td>${cell}</td>`;
+            }
+            html += '</tr>';
+        }
+        html += '</tbody>';
+    }
+    
+    html += '</table>';
     return html;
 }
 
