@@ -1,52 +1,56 @@
-# 度量服务
+# Metrics Service
 
-## 概述
+## Introduction
 
-开源项目健康指标是衡量项目可持续性、社区活跃度、代码质量及生态影响力的量化与质性标准，为项目维护者、贡献者和利益相关方提供关键洞察。能够为项目的维护者、贡献者以及各类相关利益者提供深入洞察项目实际情况的有力工具，对于把握项目的当前状况、预测其发展趋势以及提前识别未来潜在风险，都具有重大的价值。
 
----
+The health metrics of an open source project are quantitative and qualitative benchmarks that assess its sustainability, community engagement, code quality, and ecosystem impact, providing critical insights for maintainers, contributors, and stakeholders.These metrics are highly valuable for assessing a project's current status, forecasting its development trending, and identifying potential risks in advance.
 
-## 1.开源项目健康度评估的主流框架
 
-### 1.1 CHAOSS指标体系
+## 1. Popular Evaluation Frameworks for Open Source Project Health
 
-CHAOSS是Linux基金会旗下的项目，专注于通过指标分析来定义社区的健康状况。CHAOSS项目有以下4个目标：
+### 1.1 CHAOSS Metrics System
 
-（1）建立衡量开源社区健康状况的指标和模型；
+CHAOSS is a project under the Linux Foundation that focuses on defining community health through metric-based analysis. The CHAOSS project has the following four objectives:
 
-（2）开发用于衡量社区健康状况的开源软件和举措；
+（1）Develop standardized metrics and models to evaluate the health of open source communities.
 
-（3）制定计划，部署无法通过跟踪数据实现的指标;
+（2）Develop open source tools and initiatives for measuring community health.
 
-（4）与全球合作伙伴合作，塑造理解开源社区健康的方式
+（3）Formulate a plan to implement indicators that cannot be achieved through data tracking.
 
-#### 1.2 发展阶段演进
-##### 早期阶段（5工作组模式）
-| 工作组名称 | 核心关注领域 |
+（4）Collaborate with global partners to redefine how open source community health is measured
+
+#### 1.2 Evolution of development stages 
+##### Early stage (5 working group models)
+
+ 
+| working group name | core secters|
 |-----------|-------------|
-| 通用指标工作组（现指标开发工作组） | 贡献类型、贡献者、贡献地点、时间维度 |
-| 多样性、公平和包容工作组 | 沟通包容性、贡献者多样性、活动多样性、管理体系 |
-| 演进工作组 | 代码开发活动/效率/质量、问题解决、社区增长 |
-| 价值工作组（已停用） | 参与开源活动的价值衡量 |
-| 风险工作组 | 业务风险、代码质量、许可、安全、透明度、依赖性风险 |
+| General Metrics Working Group (Current Metrics Development Working Group | Contribution types, contributors, contribution locations, time dimension|
+| Diversity, Equity, and Inclusion Working Group | Communication inclusiveness, contributor diversity, activity diversity, governance structure |
+| Progress Working Group| Code development activity/efficiency/quality, issue resolution, community growth|
+| Value Working Group (inactive) | Measuring the Value of Open Source Participation|
+| Risk Management Working Group | business risk, code quality, licensing, security, transparency, and dependency risk|
 
-#####  最新发展
-- **指标平铺**：89个指标取消分类直接展示
-- **模型化转型**：
+#####  Latest Developments
+- **Ungrouped indicator list**：The 89 indicators are shown in a single list without any categorization.
+- **Model-driven Transformation**：
 
-  - 2021年华为倡议成立指标评估模型工作组
+  -  Huawei company initiated the establishment of the Metrics Evaluation Model Working Group.
 
-  - 2023年CHAOSS社区把重心转移到了评估模型工作组方向
+  - In 2023, the CHAOSS community shifted its focus toward the Working Group on Evaluation Models.
 
-  - 截至2025年 CHAOSS已发布17个指标模型
+  - Up to 2025, a total of 17 metrics models have been released by CHAOSS.
 
-#### 1.3 典型模型示例：开发响应度
-**定义**：反映项目运营能力的综合评估模型.响应度可以反映项目的投资（包括放弃）、能力，并且可以指示工程优先级，有时还会偏向于某些类型的交互和人员——响应度可以揭示很多东西，包括你没有注意到的东西，包括机器人在解决常见痛点方面的效果。
+#### 1.3 Typical Model Example: Development Responsiveness
+**Definition**：A comprehensive evaluation model reflecting a project's operational capability.
+Responsiveness can reflect the level of investment in a project (including abandonment), capabilities, and engineering priorities.
+It may also reflect certain types of interactions and contributors.Responsiveness can reveal a lot — including things you might overlook — such as how effective bots are at addressing Challenges
 
-**包含指标**：
-1. **变更请求审核周期**
-   - 衡量完整审核流程时间
-   - 识别审核流程瓶颈
+**indicators**：
+1. **变更请求审核周期Change Request Review Cycle**
+   - Measures the time taken for the complete review process
+   - Identifies bottlenecks in the review workflow
 
 2. **变更请求持续时间**
    - 仅统计被接受的变更
