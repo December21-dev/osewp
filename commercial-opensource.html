@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-zh="政策服务 - 开源生态服务白皮书" data-en="Policy Services - Open Source Ecosystem Services White Paper">政策服务 - 开源生态服务白皮书</title>
+    <title data-zh="商业开源阶段 - 开源生态服务白皮书" data-en="Commercial Open Source Stage - Open Source Ecosystem Services White Paper">商业开源阶段 - 开源生态服务白皮书</title>
+    <meta name="description" content="商业开源阶段所需的服务组合，包括商业模式设计、企业级服务、全球化运营等">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -45,22 +46,25 @@
             </div>
         </nav>
     </header>
+
     <main class="service-page">
         <section class="service-hero">
             <div class="container">
                 <div class="service-hero-content">
                     <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
+                        <i class="fas fa-building"></i>
                     </div>
-                    <h1 data-zh="政策服务" data-en="Policy Services">政策服务</h1>
-                    <p data-zh="政策解读和申报指导服务" data-en="Policy interpretation and application guidance services">政策解读和申报指导服务</p>
+                    <h1 data-zh="商业开源阶段" data-en="Commercial Open Source Stage">商业开源阶段</h1>
+                    <p data-zh="开源技术与商业价值的深度融合，重点关注可持续的商业模式和企业级服务" data-en="Deep integration of open source technology with commercial value, focusing on sustainable business models and enterprise-grade services">开源技术与商业价值的深度融合，重点关注可持续的商业模式和企业级服务</p>
                 </div>
             </div>
         </section>
+
         <section class="service-content">
             <div class="container">
                 <div class="content-wrapper">
                     <div id="service-content" class="markdown-content">
+                        <!-- Content will be loaded dynamically -->
                         <div class="loading-spinner">
                             <i class="fas fa-spinner fa-spin"></i>
                             <p data-zh="加载中..." data-en="Loading...">加载中...</p>
@@ -69,17 +73,18 @@
                 </div>
             </div>
         </section>
+
         <section class="contribute-section">
             <div class="container">
                 <div class="contribute-card">
                     <h3 data-zh="完善此页面内容" data-en="Improve This Page">完善此页面内容</h3>
-                    <p data-zh="欢迎通过GitHub贡献内容！" data-en="Welcome to contribute via GitHub!">欢迎通过GitHub贡献内容！</p>
+                    <p data-zh="发现错误或希望添加更多内容？欢迎通过GitHub贡献！" data-en="Found an error or want to add more content? Welcome to contribute via GitHub!">发现错误或希望添加更多内容？欢迎通过GitHub贡献！</p>
                     <div class="contribute-buttons">
-                        <a href="https://github.com/chancefoundation/osewp/edit/main/services/policy-services-zh.md" target="_blank" class="edit-btn">
+                        <a href="https://github.com/chancefoundation/osewp/edit/main/services/commercial-opensource-zh.md" target="_blank" class="edit-btn zh-edit">
                             <i class="fab fa-github"></i>
                             <span data-zh="编辑中文版" data-en="Edit Chinese Version">编辑中文版</span>
                         </a>
-                        <a href="https://github.com/chancefoundation/osewp/edit/main/services/policy-services-en.md" target="_blank" class="edit-btn">
+                        <a href="https://github.com/chancefoundation/osewp/edit/main/services/commercial-opensource-en.md" target="_blank" class="edit-btn en-edit">
                             <i class="fab fa-github"></i>
                             <span data-zh="编辑英文版" data-en="Edit English Version">编辑英文版</span>
                         </a>
@@ -88,6 +93,7 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -114,10 +120,12 @@
             </div>
         </div>
     </footer>
+
     <script src="js/main.js"></script>
     <script>
+        // Load service content when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            loadServicePageContent('policy-services');
+            loadServicePageContent('commercial-opensource');
         });
     </script>
 </body>
