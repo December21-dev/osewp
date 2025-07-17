@@ -48,62 +48,63 @@ Responsiveness can reflect the level of investment in a project (including aband
 It may also reflect certain types of interactions and contributors.Responsiveness can reveal a lot — including things you might overlook — such as how effective bots are at addressing Challenges
 
 **indicators**：
-1. **变更请求审核周期Change Request Review Cycle**
+1. **Change Request Review Cycle**
    - Measures the time taken for the complete review process
    - Identifies bottlenecks in the review workflow
 
-2. **变更请求持续时间**
-   - 仅统计被接受的变更
-   - 反映整体处理效率
+2. **Change Request Duration**
+   - Only accepted change requests are counted
+   - Reflects overall processing efficiency
 
-3. **问题响应时间**
-   - 首次非作者回复时间
-   - 衡量社区响应能力
+3. **Issue Response Time**
+   - Time to First Non-Author Response
+   - Measure the responsiveness of the community
 
-4. **缺陷解决持续时间**
-   - 从报告到解决的中位时间
-   - 体现维护团队效率
+4. **Bug Resolution Duration**
+   - Median Duration from Issue Reporting to Resolution
+   - Reflects the efficiency of the maintenance team
 
-#### 1.4 体系评价
-##### 优势
-- 全球协作的开放治理模式
-- 提供了丰富的指标设计思路
--  持续演进（从离散指标到评估模型）
+#### 1.4 System Evaluation
+##### Advantageg
+- Open Governance Model for Global Collaboration
+- Providing rich insights into metrics design
+- Demonstrating continuous evolution from discrete metrics to evaluation models
 
-##### 挑战
--  指标交叉重复（如演进组与风险组）
--  颗粒度过细难以实际应用
--  社区实践中采用度逐渐降低
+##### Chanllenges
+-  Overlapping and redundant metrics (e.g., Evolution group and Risk group)
+-  Excessive granularity limits practical applicability
+-  Decreasing adoption in community implementations
 
-##### 启示
-- 需平衡指标完备性与实用性
-- 模型化是重要发展方向
-- 需要更多实际案例验证
+##### Lessons Learned
+- A balance is needed between metric completeness and practicality
+- Model-driven approaches are an important direction for future development
+- More real-world case validation is required
 
 
 
-### 2. 红帽公司健康检查清单
+### 2.Health Checklist From Red Hat
 
-2021年3月，红帽公司发布了“衡量开源项目健康状况的清单”，相对于CHAOSS，这个清单提出了一个简明扼要的框架（检查清单），将衡量一个开源项目的健康状况分为7个大类，10多个小类。衡量开源项目健康状况的检查清单具体如下：
+In March 2021, Red Hat released a checklist for measuring the health of open source projects.In contrast to CHAOSS, the checklist introduces a clear and streamlined framework, dividing the evaluation of open source project health into seven primary categories and over ten subcategories.The checklist for evaluating the health of open source projects is as follows:
 
-#### 1. 基础设施
-- 项目网站
-- 治理文件
+#### 1.Infrastructures  
+-  project website
+-  Governance Document
 
-#### 2. 授权协议
-- 开源许可证
 
-#### 3. 领导治理
-- 治理模式
-- 决策过程
+#### 2.Licensing Agreement 
+- Open Source License
+
+#### 3. Leadership and Governance
+-  Governance Model
+-  Decision-Making Process
 
 #### 4. 发布管理
-| 子类       | 检查项              |
+|  Subcategory   | Checklist Item             |
 |------------|---------------------|
-| 发布频率   | 定期/不定期发布节奏 |
-| 发布约定   | 版本命名规范等      |
-| 发布工具   | 使用的发布工具链    |
-| 发布可用性 | 安装包可获得性      |
+| Release Frequency   | Regular/Irregular |
+| Release Conventions | Conventions for version numbering, etc.   |
+| Release tools  | 使用的发布工具链    |
+| Release Availability | 安装包可获得性      |
 
 #### 5. 新人培训
 - 新人指南
