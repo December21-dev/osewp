@@ -87,7 +87,7 @@ It may also reflect certain types of interactions and contributors.Responsivenes
 In March 2021, Red Hat released a checklist for measuring the health of open source projects.In contrast to CHAOSS, the checklist introduces a clear and streamlined framework, dividing the evaluation of open source project health into seven primary categories and over ten subcategories. The checklist for evaluating the health of open source projects is as follows:
 
 #### 1.Infrastructures  
--  project website
+-  Project website
 -  Governance Document
 
 
@@ -107,12 +107,12 @@ In March 2021, Red Hat released a checklist for measuring the health of open sou
 | Release Availability | Availability of Installation Packages   |
 
 #### 5. Newcomer Training
-- Newcomer guideline   
+- Newcomer Guideline   
 - Contributor Development Program
 
 #### 6. Document system
 - Content and Style Standards
-- ocumentation Writing Guidelines
+- Documentation Writing Guidelines
 
 #### 7. Operation
 - Project Information Release
@@ -141,8 +141,8 @@ Launched in 2023, OSS is China's first open source ecosystem health assessment p
 
 *Figure 1. The open source ecosystem evaluation system of OSS Compass*
 
-**OSS Compass** For the open source ecosystem, we have established a model comprising three core dimensions: productivity, robustness, and Creativity.
-#### 3.1 Productivity：The capability of transforming inputs into outputs in open source ecosystem."
+ For the open source ecosystem, **OSS Compass**  have established a model comprising three core dimensions: productivity, robustness, and Creativity.
+#### 3.1 Productivity：The capability of transforming inputs into outputs in open source ecosystem.
 (1) Collaborative Index
 
 |  Indicator              |    Definition                                                                                 | Threshold    | Weight    |
@@ -156,7 +156,7 @@ Launched in 2023, OSS is China's first open source ecosystem health assessment p
 | Code Merge Ratio          |  Percentage of Non-Author Merge(Past 90 Days)                                         | 100%   | 10.11%  |
 |  Lines of Code (LOC)              | Avg. Weekly LOC Changed(Past 90 Days)                                            | 300000 | 5.64%   |
 
-(2) community Services and Support Index
+(2) Community Services and Support Index
 
 | Indicator              | Definition                                                                                     | Threshold   | Weight   |
 |------------------------|------------------------------------------------------------------------------------------|--------|---------|
@@ -210,6 +210,6 @@ Launched in 2023, OSS is China's first open source ecosystem health assessment p
    - Executable Layered Metrics Breakdown
    - Observable Quantitative Measurements
 2. **Practical Value**：
-   - Offers the open-source Compass platform
+   - Offers the open-source compass platform
    - Supports direct use on official site or local deployment
    - Ensures high usability and operability
