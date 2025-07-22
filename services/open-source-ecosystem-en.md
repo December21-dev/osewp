@@ -8,7 +8,7 @@ The open source ecosystem breaks the traditional model where enterprises or orga
 
 The open source ecosystem relies on four major roles for effective collaboration, mainly involving open source contributors, open source users, open source operators, and open source service providers, with both enterprises and individuals able to participate.
 
-![Key Roles in Open Source Ecosystem](https://github.com/December21-dev/osewp/blob/main/images/%E4%B8%AA%E4%BA%BA%E6%89%AE%E6%BC%94%E7%9A%84%E8%A7%92%E8%89%B2.png)
+![Key Roles in Open Source Ecosystem](images/%E4%B8%AA%E4%BA%BA%E6%89%AE%E6%BC%94%E7%9A%84%E8%A7%92%E8%89%B2.png)
 
 ### Individual Roles
 
@@ -55,7 +55,7 @@ In 2019 GitHub code repositories, open source projects in AI, cloud computing, a
 - **Open Source Foundations Become Important Roles in Open Source Operations**
 Currently, mainstream open source foundations (Linux Foundation, Apache Foundation, etc.) are 501(c)(3) or 501(c) non-profit organizations registered with the US Internal Revenue Service. In recent years, open source foundation membership and hosted project numbers continue to expand, with Chinese enterprises actively participating in international open source foundations.
 
-![Figure 2](https://github.com/December21-dev/osewp/blob/main/images/%E5%9F%BA%E9%87%91%E4%BC%9A%E6%95%B0%E6%8D%AE.png)
+![Figure 2](images/%E5%9F%BA%E9%87%91%E4%BC%9A%E6%95%B0%E6%8D%AE.png)
 
 ## Future Path of Open Source Ecosystem
 
