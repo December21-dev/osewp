@@ -46,7 +46,7 @@
   2019 年 GitHub 代码仓库中，人工智能、云计算等新技术领域开源项目关注度较高，微软的源码编辑器VSCode、机器学习文档 AzureDocs 是 2019 年 GitHub 上贡献者最多的开源项目，其次是谷歌的机器学习平台 TensorFlow、容器编排平台 Kubernetes 和 Facebook 的移动应用开发框架 React Native框架。
 - **开源基金会成为开源运营重要角色**
 目前主流的开源基金（Linux基金会、Apache基金会等）是在美国国税局注册的501（CX3）或501Cc）非盈利机构，近年来开源基金会会员数及托管项目数不断扩充，我国企业积极参与国际开源基金会。
-![图2](https://github.com/December21-dev/osewp/blob/main/images/%E5%9F%BA%E9%87%91%E4%BC%9A%E6%95%B0%E6%8D%AE.png)
+![图2](https://github.com/December21-dev/osewp/blob/main/images/foundation-data.png)
 
 ## 开源生态未来之路
 - **开源从个人行为逐渐发展成为企业行为**
