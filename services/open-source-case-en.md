@@ -1,22 +1,23 @@
 # Open-Source Business Cases
-## 开源领域成熟商业模式
-### 订阅模式
- 订阅服务模式“重服务、轻软件”，由传统商业软件的以“产品”为卖点转向以“服务”为卖点，是开源软件公司采用的一种全新的商业模式。一是订阅服务模式允许用户通过定期付费的方式来维持对软件的使用权，而非一次性支付高昂的购买费用。这种支付方式既减轻了企业发展初期的投资负担，同时也保障了软件的持续更新和技术支持。随着业务需求的变化，企业用户可以灵活地选择增加或减少服务内容，或是调整服务级别，实现资源的最优配置。二是订阅服务模式通常包括自动更新服务，企业用户可以随时获取最新及改进的功能，无需支付额外的更新费用。此模式不仅确保了软件的安全性和最新性，还提高了企业的运营效率。总之，订阅服务模式在开源软件行业中体现了一种战略性的演变，强调通过服务而非仅仅是软件销售来建立长期的客户关系和稳定的收入来源。
+## Mature Business Models in the Open-Source Domain
+### subscription model
+ The subscription service model, which emphasizes "service over software," represents a brand-new business model adopted by open-source software companies, shifting from the traditional commercial software approach that focuses on "products" as the selling point to prioritizing "services." First, the subscription service model allows users to maintain access to the software through regular payments, rather than paying a high one-time purchase fee. This payment method not only reduces the initial investment burden for enterprises in their early development stages but also ensures continuous software updates and technical support. As business needs change, enterprise users can flexibly choose to increase or decrease service content, or adjust service levels, achieving optimal resource allocation.Second, the subscription service model usually includes automatic update services, enabling enterprise users to access the latest and improved features at any time without paying additional update fees. This model not only ensures the security of the software and keeps it at the latest version, but also enhances the operational efficiency of enterprises.In conclusion, the subscription service model reflects a strategic evolution in the open-source software industry, emphasizing the establishment of long-term customer relationships and stable revenue streams through services rather than merely software sales.
 
 
 
 
 
 
-### 双许可模式
-双许可模式是一种开源软件发布策略，允许软件作者以开源许可证和专有许可证两种形式发布其软件，给用户和开发者提供灵活的选择。在双许可模式中，一是用户可以根据自身需求和偏好选择使用开源许可证下的社区发行版本。二是选择购买专有许可证下的商业发行版本，获得额外的功能、支持和服务。
+### Dual licensing model
+The dual-licensing model is an open-source software distribution strategy that allows software authors to release their software under both an open-source license and a proprietary license, providing users and developers with flexible choices.
+In this model, first, users can, based on their own needs and preferences, choose to use the community distribution version under the open-source license. Second, they can opt to purchase the commercial distribution version under the proprietary license, gaining access to additional features, support, and services.
 
 
-双许可模式设计目的之一是在开源和商业之间取得平衡。双许可模式允许开源代码和专有代码的集成，企业可以在开源软件的基础上，集成自己专有的代码，添加新功能、优化性能等，使产品更加契合自身业务需求。对于企业自主研发的专有代码部分，可以通过商业许可的方式授权使用，保护自身的知识产权。开源部分则可以吸引开发者关注和使用，而专有部分则为企业用户提供增值服务，两者互为补充。重用开源代码可以避免从头开发的昂贵成本，而专有部分则满足定制化需求。
+One of the design purposes of the dual-licensing model is to strike a balance between open-source and commercialization. This model allows the integration of open-source code and proprietary code, enabling enterprises to integrate their own proprietary code into open-source software, add new functions, optimize performance, etc., so as to make the product more in line with their own business needs. For the self-developed proprietary code part of an enterprise, it can be licensed for use through commercial licensing to protect its own intellectual property rights. The open-source part can attract developers' attention and adoption, while the proprietary part provides value-added services for enterprise users, with the two complementing each other. Reusing open-source code can avoid the high cost of developing from scratch, and the proprietary part can meet customized needs.
 
-双许可模式包含三大基本特征。
-- 开源版本的许可证通常为强约束型许可证，即copyleft类开源许可证。该类许可证旨在保障下游用户的源码自由，故一般不允许用户闭源修改后的开源代码或更换许可证。
-- 由于双许可模式下的核心产品代码不仅可能来自软件公司自研，也可能来自开源贡献。因此，企业在进行商业许可时，需通过知识产权转让或代码重写的方式，避免产生知识产权纠纷。
+Three fundamental features in the dual-licensing model 
+- The license for the open-source version is typically a strongly restrictive one, i.e., a copyleft-type open-source license. Such licenses aim to safeguard the source code freedom of downstream users, so they generally prohibit users from keeping modified open-source code closed-source or changing the license.
+- 由于双许可模式下的核心产品代码不仅可能来自软件公司自研，也可能来自开源贡献。因此，企业在进行商业许可时，需通过知识产权转让或代码重写的方式，避免产生知识产权纠纷。Under the dual-licensing model, the core product code may not only come from the independent research and development of software companies but also from open-source contributions. Therefore, when enterprises conduct commercial licensing, they need to avoid intellectual property disputes through means such as intellectual property transfer or code rewriting. 
 - 实行双重许可模式的软件早期一般都具有较大规模的免费用户，后随着开源社区的广泛触达逐渐演化出新的需求和新的用户群体。双许可模式的典型代表有：MySQL、Redis、Qt等，大部分和数据库领域有关。
 
 
@@ -37,8 +38,9 @@
 ### 硬件捆绑模式
 硬件捆绑模式是指将开源软件与硬件产品捆绑销售的一种商业模式。企业通过将开源软件与自家硬件产品紧密结合，以销售硬件为主导，开源软件作为增值部分，提升整体解决方案的价值，从而实现盈利。IBM是采用这种模式的典型代表之一。自20世纪90年代起，IBM开始大力投资开源领域，包括Linux操作系统、Apache Web服务器、Eclipse集成开发环境等。IBM的硬件捆绑开源软件模式主要体现在以下几个方面：一是服务器捆绑Linux。IBM将自家的服务器产品与Linux操作系统捆绑销售，为客户提供一站式的硬件和软件解决方案，通过高性能的Linux服务器来竞争市场份额。这降低了客户的采购和部署成本，也为IBM创造了可观的收益。二是存储设备捆绑开源软件。IBM将自家的存储设备与开源的分布式文件系统如GPFS、Lustre等捆绑销售，提供高性能、高可靠的数据存储解决方案。三是云计算捆绑开源中间件。IBM的云计算产品中包含大量开源中间件，如OpenStack、Kubernetes、Apache Kafka等，为用户提供开箱即用的云服务。
 
-## 案例分析
-| 地域   | 案例         | 选择理由               | 特征                 |
+## 案例分析  Case Analysis
+
+| Country  | Case        | Reason            | Feature                 |
 |--------|--------------|------------------------|----------------------|
 美国    | Red Hat|订阅模式鼻祖，完整开源商业化闭环|以开源为核心业务的企业
 中国  |PingCAP|开源数据库全球化标杆，社区驱动型商业化|以开源为核心业务的企业|
