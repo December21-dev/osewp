@@ -17,46 +17,67 @@ One of the design purposes of the dual-licensing model is to strike a balance be
 
 Three fundamental features in the dual-licensing model 
 - The license for the open-source version is typically a strongly restrictive one, i.e., a copyleft-type open-source license. Such licenses aim to safeguard the source code freedom of downstream users, so they generally prohibit users from keeping modified open-source code closed-source or changing the license.
-- 由于双许可模式下的核心产品代码不仅可能来自软件公司自研，也可能来自开源贡献。因此，企业在进行商业许可时，需通过知识产权转让或代码重写的方式，避免产生知识产权纠纷。Under the dual-licensing model, the core product code may not only come from the independent research and development of software companies but also from open-source contributions. Therefore, when enterprises conduct commercial licensing, they need to avoid intellectual property disputes through means such as intellectual property transfer or code rewriting. 
-- 实行双重许可模式的软件早期一般都具有较大规模的免费用户，后随着开源社区的广泛触达逐渐演化出新的需求和新的用户群体。双许可模式的典型代表有：MySQL、Redis、Qt等，大部分和数据库领域有关。
+- Under the dual-licensing model, the core product code may not only come from the independent research and development of software companies but also from open-source contributions. Therefore, when enterprises conduct commercial licensing, they need to avoid intellectual property disputes through means such as intellectual property transfer or code rewriting. 
+- Software adopting a dual-licensing model typically accumulates a substantial free user base in its early stages. As open-source communities expand their reach, new use cases and users gradually emerge. Notable examples of this licensing approach include MySQL, Redis, and Qt, with most being database-related technologies.
 
 
-### 开放核心模式
- 开放核心模式结合开源软件的开放性和专有软件的商业化特点。软件的基本版本或核心功能是开源的，免费提供给用户使用和修改。与此同时，企业也会开发一些额外的增值功能或服务，需要用户付费获取。在此种模式中，一是企业能够吸引广泛的用户群体使用基础的开源产品，逐步建立起一个活跃的用户基础和社区。二是企业通过提供额外的付费功能或服务，创造营收，支持产品的持续开发和改进。
+### Open-Core Model
+ The open-core model combines the openness of open-source software with the commercial aspects of proprietary software. In this model, the base version or core function of the software is open-source and freely available for users to use and modify. Meanwhile, the company also develops additional premium features or services that require payment.This approach offers two key advantages:1.Community Growth: The company attracts a broad user group for its foundational open-source product, fostering an active community. 2.Sustainable Revenue: By offering paid add-ons or services, the company generates income to support ongoing development and improvements.
 
-   这种模式的典型代表是Databricks和GitLab，Databricks基于开源的Apache Spark构建，提供超出基础开源功能的高级商业服务，如优化的数据处理、机器学习库和企业级安全支持，吸引企业用户付费。同样，GitLab开源其核心版本，提供基本的版本控制和持续集成等功能，而其商业版本则包括高级项目管理工具、安全测试和性能监控等。通过提供免费的开源版本来建立用户基础和品牌信任，通过销售增值的专有功能和服务来实现盈利，实现开源社区的创新力和商业产品的收益能力的结合。
+   A prime example of this model is Databricks and GitLab. Databricks builds upon the open-source Apache Spark platform while offering premium commercial services that extend beyond the core open-source functionality. These value-added services include optimized data processing, machine learning libraries, and enterprise-grade security support - all designed to appeal to enterprise customers willing to pay for enhanced capabilities.Similarly, GitLab offers its core version as open-source, providing essential features like version control and continuous integration, while its commercial edition includes advanced project management tools, security testing, and performance monitoring capabilities. This strategy allows GitLab to build its user base and brand trust through the free open-source offering, while generating revenue through premium proprietary features and services—effectively combining the innovative power of open-source communities with the revenue potential of commercial products.
 
-### SaaS模式
-  这种模式的典型代表是Databricks和GitLab，Databricks基于开源的Apache Spark构建，提供超出基础开源功能的高级商业服务，如优化的数据处理、机器学习库和企业级安全支持，吸引企业用户付费。同样，GitLab开源其核心版本，提供基本的版本控制和持续集成等功能，而其商业版本则包括高级项目管理工具、安全测试和性能监控等。通过提供免费的开源版本来建立用户基础和品牌信任，通过销售增值的专有功能和服务来实现盈利，实现开源社区的创新力和商业产品的收益能力的结合。
+### SaaS Model
+ 
 
-### 应用商场模式
-应用商场模式是一种通过创建一个平台来促成交易的商业模式，其允许开发者和用户之间买卖插件、应用或其他服务。此模式成功的关键在于建立一个活跃的社区和一个高效的交易平台，使得用户能够轻松地找到并购买他们需要的增值服务，同时也为开发者提供一个展示和销售其产品的渠道。
+ The typical representatives of this model are **Databricks** and **GitLab**. Databricks, built on the open-source Apache Spark, offers advanced commercial services beyond basic open-source features, such as optimized data processing, machine learning libraries, and enterprise-grade security support, to attract enterprise users to pay. Similarly, GitLab open-sources its core version, providing basic functions like version control and continuous integration, while its commercial version includes advanced project management tools, security testing, and performance monitoring. By offering a free open-source version to build a user base and brand trust, and generating profits through selling value-added proprietary features and services, it combines the innovation of the open-source community with the profitability of commercial products.
 
-### 嵌入广告模式
-嵌入广告模式是一种创新的商业策略，软件厂商将广告作为软件产品的一部分进行嵌入，依靠开源软件的快速推广而使软件内的嵌入广告得以广泛传播，从而实现商业生态的闭环。随着开源软件的广泛触达，软件中嵌入的广告便随之传播到更广泛的用户群体中。广告厂商达到了产品推广的效果，就更愿意向软件厂商投放广告，软件厂商获利则会继续投入到开源软件的开发中，从而形成一个良性循环。
+### App Store model
 
-### 硬件捆绑模式
-硬件捆绑模式是指将开源软件与硬件产品捆绑销售的一种商业模式。企业通过将开源软件与自家硬件产品紧密结合，以销售硬件为主导，开源软件作为增值部分，提升整体解决方案的价值，从而实现盈利。IBM是采用这种模式的典型代表之一。自20世纪90年代起，IBM开始大力投资开源领域，包括Linux操作系统、Apache Web服务器、Eclipse集成开发环境等。IBM的硬件捆绑开源软件模式主要体现在以下几个方面：一是服务器捆绑Linux。IBM将自家的服务器产品与Linux操作系统捆绑销售，为客户提供一站式的硬件和软件解决方案，通过高性能的Linux服务器来竞争市场份额。这降低了客户的采购和部署成本，也为IBM创造了可观的收益。二是存储设备捆绑开源软件。IBM将自家的存储设备与开源的分布式文件系统如GPFS、Lustre等捆绑销售，提供高性能、高可靠的数据存储解决方案。三是云计算捆绑开源中间件。IBM的云计算产品中包含大量开源中间件，如OpenStack、Kubernetes、Apache Kafka等，为用户提供开箱即用的云服务。
+The app store model is a business model that facilitates transactions by creating a platform, allowing developers and users to buy and sell plug-ins, applications, or other services. The key to the success of this model lies in building an active community and an efficient trading platform, enabling users to easily find and purchase the value-added services they need, while also providing developers with a channel to display and sell their products.
 
-## 案例分析  Case Analysis
+### Embedded advertising model
+The embedded advertising model is an innovative business strategy where software vendors embed advertisements as part of their software products. Leveraging the rapid promotion of open-source software, the embedded ads within the software achieve wide dissemination, thereby forming a closed loop of the commercial ecosystem. As open-source software reaches a broader audience, the ads embedded in it are consequently spread to a more extensive user base. Advertisers, having achieved the effect of product promotion, are more willing to place ads with software vendors. In turn, the profits gained by software vendors enable them to continue investing in the development of open-source software, thus creating a positive cycle.
+
+
+### Hardware-Bundling Model
+The hardware-bundling model refers to a business approach that combines open-source software with hardware products for bundle sales. In this model, companies tightly couple open-source software with their proprietary hardware offerings, using hardware as the primary revenue driver while positioning the open-source components as value-added differentiators to enhance the overall solution's appeal. This creates a profitable synergy between the two elements. A prime example of this strategy is IBM, which has successfully implemented this hybrid approach.
+
+Since the 1990s, IBM has made significant investments in open-source technologies, including the Linux operating system, Apache Web Server, and Eclipse Integrated Development Environment (IDE). IBM's hardware-and-open-source-software bundling model is primarily reflected in the following aspects:
+1. Servers Bundled with Linux
+
+IBM integrates its server products with the Linux operating system, offering customers a one-stop hardware and software solution. By delivering high-performance Linux-based servers, IBM competes for market share while reducing procurement and deployment costs for clients—generating substantial revenue in the process.
+
+2. Storage Devices Bundled with Open-Source Software
+
+IBM pairs its storage systems with open-source distributed file systems such as GPFS and Lustre, providing high-performance, highly reliable data storage solutions.
+
+3. Cloud Computing Bundled with Open-Source Middleware
+
+IBM’s cloud computing offerings incorporate a wide range of open-source middleware, including OpenStack, Kubernetes, and Apache Kafka, delivering out-of-the-box cloud services to users.
+
+##   Case Analysis
 
 | Country  | Case        | Reason            | Feature                 |
 |--------|--------------|------------------------|----------------------|
-美国    | Red Hat|订阅模式鼻祖，完整开源商业化闭环|以开源为核心业务的企业
-中国  |PingCAP|开源数据库全球化标杆，社区驱动型商业化|以开源为核心业务的企业|
-美国   |谷歌|开源生态构建者，广告+云服务多元变现|大企业执行开源战略的代表|
-中国|华为|从封闭到开源的战略转型代表|大企业执行开源战略的代表|
+USA    | Red Hat|Pioneer of subscription model, achieved full open-source commercialization cycle|Open-source-centric enterprise
+China  |PingCAP|Global benchmark for open-source databases, community-driven commercialization|Open-source-centric enterprise|
+USA   |Google|	Open-source ecosystem builder, diversified monetization via ads + cloud services|Representative of corporate open-source strategy|
+China|Huawei| Representatives of the shift from closed-source to open-source|Representative of corporate open-source strategy|
 
 
-### 红帽（Red Hat）：开源商业化的范式革新
-红帽是全球领先的企业级开源解决方案供应商，成立于1993年，总部位于美国北卡罗来纳州罗利市。作为标准普尔500指数成员，公司拥有超过2万名员工和100多家分公司，覆盖全球市场。其核心业务涵盖操作系统（RHEL）、云计算（OpenShift）、存储（Ceph Storage）、中间件（JBoss）和自动化工具（Ansible）等领域。2018年，IBM以340亿美元收购红帽，进一步强化了其在混合云和开源生态中的战略地位。
+### Red Hat：Open-source commercialization Breakthrough
+Red Hat is the world's leading provider of enterprise open-source solutions. Founded in 1993 and headquartered in Raleigh, North Carolina, USA, the company is a constituent of the S&P 500 index with over 20,000 employees and more than 100 subsidiaries operating globally. Its core offerings include enterprise operating systems (RHEL), cloud computing platforms (OpenShift), storage solutions (Ceph Storage), middleware (JBoss), and automation tools (Ansible). In 2018, IBM completed its acquisition of Red Hat for $34 billion, a strategic move that significantly enhanced IBM's capabilities in hybrid cloud and open-source technologies. The acquisition represents one of the largest technology deals in history and solidified Red Hat's position as a cornerstone of modern enterprise IT infrastructure.
 
-作为开源商业化领域的“教科书式”案例，红帽开创了“开源产品+订阅服务”的商业模式范式。自1993年成立以来，该公司通过提供企业级支持、安全补丁和系统维护服务，将免费的开源技术转化为付费的商业产品。这一模式成功解决了企业用户在生产环境中使用开源软件的后顾之忧，红帽在2019年经营性现金流10.1亿美元，递延收入占比显著，反映出订阅模式的稳定性。从收入的整体结构来看，订阅服务收入占据主导地位（2019财年占比87.7%），其次是咨询与培训（12.3%）。2019财年营收33.62亿美元，同比增长15.1%，毛利率稳定在85%。
+Red Hat has established itself as the "textbook case" of open-source commercialization, pioneering the business model paradigm of "open-source products + subscription services." Since its founding in 1993, the company has successfully transformed free open-source technology into commercial offerings by providing enterprise-grade support, security patches, and system maintenance services.
+这一模式成功解决了企业用户在生产环境中使用开源软件的后顾之忧，红帽在2019年经营性现金流10.1亿美元，递延收入占比显著，反映出订阅模式的稳定性。从收入的整体结构来看，订阅服务收入占据主导地位（2019财年占比87.7%），其次是咨询与培训（12.3%）。2019财年营收33.62亿美元，同比增长15.1%，毛利率稳定在85%。
+This innovative model effectively addressed enterprises' concerns about adopting open-source software in production environments. By 2019, Red Hat generated $1.01 billion in operating cash flow, with deferred revenue accounting for a significant portion—reflecting the stability of its subscription-based approach.
 
-红帽的商业模式以“开源社区+企业服务”为核心，形成差异化竞争力：
-- “免费软件，付费服务”：软件代码开源免费，收入依赖订阅制技术支持。例如，RHEL用户需订阅以获得安全更新、兼容性认证和7×24小时支持。
+Financially, subscription services dominated Red Hat's revenue structure (87.7% in FY2019), followed by consulting and training (12.3%). The company reported $3.362 billion in revenue for fiscal year 2019, representing 15.1% year-over-year growth, while maintaining a stable gross margin of 85%.
 
-- 技术整合路径：通过“项目-集成-平台”三阶段，将社区创新（如Linux内核、Kubernetes）转化为企业级产品。例如，OpenShift整合容器、自动化和云原生技术。
+Red Hat has built differentiated market competitiveness through its "open-source community + enterprise services" dual-engine business model:
+- “Free software, paid services": The software's source code is open-source and free, while revenue relies on subscription-based technical support. For example, RHEL users need a subscription to access security updates, compatibility certifications, and 24/7 support.
+
+- Technology Integration Path: Transforming community innovations (such as the Linux kernel and Kubernetes) into enterprise-grade products through a three-phase approach of "Project-Integration-Platform." For example, OpenShift integrates containers, automation, and cloud-native technologies.
 
 - 混合云定位：成为企业私有云与公有云之间的连接桥梁
 
