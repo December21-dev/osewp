@@ -1,6 +1,6 @@
 # Open-Source Business Cases
 ## Mature Business Models in the Open-Source Domain
-### subscription model
+### Subscription model
  The subscription service model, which emphasizes "service over software," represents a brand-new business model adopted by open-source software companies, shifting from the traditional commercial software approach that focuses on "products" as the selling point to prioritizing "services." First, the subscription service model allows users to maintain access to the software through regular payments, rather than paying a high one-time purchase fee. This payment method not only reduces the initial investment burden for enterprises in their early development stages but also ensures continuous software updates and technical support. As business needs change, enterprise users can flexibly choose to increase or decrease service content, or adjust service levels, achieving optimal resource allocation.Second, the subscription service model usually includes automatic update services, enabling enterprise users to access the latest and improved features at any time without paying additional update fees. This model not only ensures the security of the software and keeps it at the latest version, but also enhances the operational efficiency of enterprises.In conclusion, the subscription service model reflects a strategic evolution in the open-source software industry, emphasizing the establishment of long-term customer relationships and stable revenue streams through services rather than merely software sales.
 
 
@@ -69,7 +69,7 @@ China|Huawei| Representatives of the shift from closed-source to open-source|Rep
 Red Hat is the world's leading provider of enterprise open-source solutions. Founded in 1993 and headquartered in Raleigh, North Carolina, USA, the company is a constituent of the S&P 500 index with over 20,000 employees and more than 100 subsidiaries operating globally. Its core offerings include enterprise operating systems (RHEL), cloud computing platforms (OpenShift), storage solutions (Ceph Storage), middleware (JBoss), and automation tools (Ansible). In 2018, IBM completed its acquisition of Red Hat for $34 billion, a strategic move that significantly enhanced IBM's capabilities in hybrid cloud and open-source technologies. The acquisition represents one of the largest technology deals in history and solidified Red Hat's position as a cornerstone of modern enterprise IT infrastructure.
 
 Red Hat has established itself as the "textbook case" of open-source commercialization, pioneering the business model paradigm of "open-source products + subscription services." Since its founding in 1993, the company has successfully transformed free open-source technology into commercial offerings by providing enterprise-grade support, security patches, and system maintenance services.
-这一模式成功解决了企业用户在生产环境中使用开源软件的后顾之忧，红帽在2019年经营性现金流10.1亿美元，递延收入占比显著，反映出订阅模式的稳定性。从收入的整体结构来看，订阅服务收入占据主导地位（2019财年占比87.7%），其次是咨询与培训（12.3%）。2019财年营收33.62亿美元，同比增长15.1%，毛利率稳定在85%。
+
 This innovative model effectively addressed enterprises' concerns about adopting open-source software in production environments. By 2019, Red Hat generated $1.01 billion in operating cash flow, with deferred revenue accounting for a significant portion—reflecting the stability of its subscription-based approach.
 
 Financially, subscription services dominated Red Hat's revenue structure (87.7% in FY2019), followed by consulting and training (12.3%). The company reported $3.362 billion in revenue for fiscal year 2019, representing 15.1% year-over-year growth, while maintaining a stable gross margin of 85%.
@@ -79,58 +79,65 @@ Red Hat has built differentiated market competitiveness through its "open-source
 
 - Technology Integration Path: Transforming community innovations (such as the Linux kernel and Kubernetes) into enterprise-grade products through a three-phase approach of "Project-Integration-Platform." For example, OpenShift integrates containers, automation, and cloud-native technologies.
 
-- 混合云定位：成为企业私有云与公有云之间的连接桥梁
+- Hybrid cloud positioning: serving as a bridge between enterprise private clouds and public clouds.
 
-- 生态中立性：保持与多云计算提供商的兼容性，避免厂商锁定。
+- Ecosystem neutrality: maintaining compatibility with multiple cloud providers to avoid vendor lock-in.
 
-红帽的成功表明，开源并非反商业，而是构建了新的价值创造逻辑。其模式精髓在于找准了企业用户的痛点——生产环境中的稳定性与安全性需求，并通过专业服务满足这些需求。这一范式为后续开源企业的商业化提供了基础参考框架
+Red Hat’s success demonstrates that open source is not anti-commercial; rather, it establishes a new logic for value creation. Its core approach lies in precisely identifying the pain points of enterprise users—the need for stability and security in production environments—and addressing them through professional services. This paradigm provides a foundational reference framework for the commercialization of subsequent open-source companies.
 
-### PingCAP：开源数据库的全球化突围
-PingCAP（平凯星辰）成立于2015年，是全球领先的企业级开源分布式数据库厂商。其使命是通过技术赋能开发者和企业，推动数据价值的最大化与数字化转型。产品体系以TiDB为核心，覆盖OLTP（在线事务处理）、OLAP（在线分析处理）及HTAP（混合事务/分析处理）场景，支持云原生部署和MySQL兼容生态。在全球9个分支机构（中国、美国、日本等），服务20多个国家的3000+企业，包括金融（中国银行、平安人寿）、互联网（京东、小米）、Web3（NFTScan）等关键领域。
+### PingCAP：Global Expansion of Open-Source Databases
+PingCAP, founded in 2015, is a leading global provider of enterprise-level open-source distributed databases. Its mission is to empower developers and enterprises through technology, driving the maximization of data value and digital transformation. The product portfolio centers on TiDB and covers OLTP (Online Transaction Processing), OLAP (Online Analytical Processing), and HTAP (Hybrid Transactional/Analytical Processing) scenarios, supporting cloud-native deployment and a MySQL-compatible ecosystem. With nine branches worldwide—including China, the United States, and Japan—PingCAP serves over 3,000 enterprises across more than 20 countries, spanning key sectors such as finance (Bank of China, Ping An Life), Internet (JD.com, Xiaomi), and Web3 （NFTScan）
 
-与红帽的服务订阅模式不同，PingCAP探索出了“开源核心+云服务+生态增值”的复合商业模式，2023年营收3500万美元（同比+94.4%），中国市场增速100%。海外市场收入占比超50%，成为中国开源软件领域营收最高的企业。2024年估值达30亿美元，成为中国最大的开源独角兽企业。
-
-PingCAP的成功首先建立在强大的开源社区运营基础上。TiDB在GitHub上获得超过38000个星，汇聚了全球近900名代码贡献者。这种社区驱动的开发模式不仅加速了产品迭代，也形成了天然的客户教育渠道。PingCAP的联合创始人兼CTO黄东旭将开源社区视为“最佳获客引擎”——技术团队通过社区讨论即可了解用户需求，而产品优劣也在开发者群体中形成口碑传播，大幅降低了传统企业软件销售的高昂获客成本。
-
-PingCAP的另一个战略亮点是国际化与本土市场的双轨并行。公司早期以中国互联网企业为目标客户，如游戏公司盖娅互娱成为其首家付费客户。这些互联网业务场景具有高并发、数据量大的特点，为TiDB提供了极佳的产品打磨机会。随着产品成熟，PingCAP迅速拓展海外市场，目前已在美、欧、日、南亚等地区建立客户群，海外营收甚至超过国内。
-
-PingCAP通过“开源驱动创新、订阅保障营收、云服务扩展市场”的模式，成功在分布式数据库领域占据一席之地。其核心护城河在于技术领先性与社区生态的正向循环，而未来挑战则集中在全球化市场的深度渗透与传统行业的替代竞争中。
-
-PingCAP的案例证明，开源是全球基础软件领域最有效的市场进入策略。通过社区驱动的产品迭代和全球化的协作网络，中国开源企业完全有能力在数据库等核心基础软件领域实现技术突破，并将本土创新转化为全球竞争力。其“产品-社区-商业化”的正向循环模型，为新一代开源企业提供了可复制的增长框架。
-
-### 谷歌（Google）：开源生态的流量霸权
-谷歌是全球领先的科技公司，成立于1998年，总部位于美国加利福尼亚州山景城。公司拥有超18万名员工，业务覆盖全球150多个国家。其核心业务涵盖搜索引擎（Google Search）、云计算（Google Cloud）、开源操作系统（Android）、浏览器（Chrome）、人工智能框架（TensorFlow）及大模型（Gemma）等领域。其中：AOSP、Kubernetes、Chrome、TensorFlow等项目，都是谷歌旗下全球著名的开源项目。
-
-从商业战略的角度来说，Android是谷歌最成功的开源品牌。虽然AOSP（Android Open Source Project）才是真正的开源项目，而Android并不能称之为开源项目。但是在普通人的心目中：Android就是开源的代名词。但事实上，谷歌成功实现了一套“开放核心+闭源服务”的商业模式，一方面通过开源，免费授权设备厂商，快速的拓展市场，抢占原本属于iOS的市场份额。另一方面又通过GMS (Google Mobile Service)，提供闭源增值服务，牢牢把控生态位，赚取预装授权费+广告分成。据报道，2016年，Android为谷歌带来了310亿美元的年收入，其中220亿美元为净利润。
-
-在浏览器领域，谷歌从2005年开始，通过支持Mozilla FireFox开源，每年支付Mozilla约4亿至4.5亿美元，以确保谷歌作为Firefox的默认搜索引擎。从而实现流量闭环。但是另一方面，谷歌最终决定，自行开发一套浏览器（Chrome），随后逐步赶上并超过了Firefox的市场份额，成为浏览器领域的最后赢家。这背后的逻辑，依然是流量与广告收入。
-
-在云计算领域，谷歌开源的项目同样出色，但是却未能获得类似于操作系统或浏览器那样的成功，根据Gartner数据，2019年谷歌云全球市场份额仅为5.3%，而AWS和Azure分别为45%和17.9%，即使到了2025年，谷歌云的市场份额也仅仅在10~12%之间，这其中的原因也相当耐人寻味。有相当多的分析指出：谷歌的工程师文化主导，忽视企业需求痛点；ToB服务能力结构性缺失是最主要的原因。另外，关键收购错失（GitHub、红帽分别被微软和IBM收购），渠道建设滞后也是关键的原因。
-
-总之，企业选择开源战略，并不能够确保必然获得成功，即使是谷歌这样的最懂开源，也最会玩开源的大厂。
-
-### 华为：从封闭到开放的生态转型
-华为公司成立于1987年，但是长期以来却非常重视“信息安全”，特别重视内部的知识产权和源代码保护，以防外泄。对于开源的看法与投入，也偏于保守。直到2008年，华为才成立了开源能力中心，致力于规范开源软件的使用和管理。根据华为首席开源联络官任旭东所著的《开源心法》介绍，华为的开源可以分为4个发展阶段：
-- 2009之前：专注于开源软件的规范使用，实现从自发到有序的转变。在合规使用的基础上，更关注开源软件的安全性问题。
-
-- 2010~2014年：以2010年加入Linux基金会为标志，积极参与开源社区，构建开源战略管理体系。先后加入了Apache软件基金会、OpenStack基金会、Linaro基金会等重要组织，并于2014年正式建立了公司级的开源战略管理体系
-
-- 2015~2017年：持续深化开源贡献、构建对外开源管理体系及团队，积极探索主动开源。2015年，华为作为初创成员参与了CNCF的成立；2016年，华为还主动开源了LiteOS，并在随后的时间里，不断发起和捐赠了更多的开源项目。
-
-- 2018年至今：坚持积极贡献，不断优化开源机制，加速重量级开源项目孵化。
-
-除了企业主动从封闭向开放的转变，来自于美国的极限施压，也是促使华为变得更加积极拥抱开源的推动因素。
-
-美国对于华为制裁的时间下如下：2018年6月7日，美国国会呼吁谷歌停止与华为合作，2019年5月15日，时任美国总统特朗普发布总统令。该项文件的主要内容为禁止使用敌对国家("adversary")的信息与通信技术及服务，并授权美国商务部具体执行。同日，美国商务部(Department of Commerce）及其下属机关"工业与安全局"（BIS）公布执行总统令的具体措施，将华为加入“实体清单”(Entity List)。2019年5月19日，谷歌公司将华为手机从安卓升级列表中删去。同日，谷歌宣布暂停向华为提供 GMS，包括 Google Play 商店、Gmail、Google 地图等应用程序和服务。2019年7月16日，美国两党参议员组织推出了5G立法，该立法将华为列入黑名单。
-
-于是，到了2019年8月，在华为开发者大会上，华为正式发布了鸿蒙系统HarmonyOS。更进一步，2020年6月15日，在多方共同努力之下，由阿里巴巴、百度、华为、浪潮、360、腾讯、招商银行联合发起，开放原子开源基金会在民政部注册成立，成为中国首个致力于开源产业公益事业的非营利性独立法人机构。同年的9月10日，华为 OpenHarmony 操作系统开源，并捐赠到开放原子开源基金会。随后开始的，是一段令人惊叹的飞速发展。截至2025年1月31日，社区累计超过8200名贡献者，代码量1.3亿行，生态伙伴发展至401家，共63家成员单位。社区通过技术创新和生态建设，推动了全场景操作系统的构建，覆盖金融、教育、医疗、交通、工业等多个关键行业。2025年5月8日，鸿蒙电脑也正式亮相，预约开始约15个小时，华为商城中MateBook Fold非凡大师的预约人数就超过了5万人。
-
-另一个著名的华为开源项目是openEuler，openEuler前身为华为于2010年启动的内部研发项目EulerOS操作系统，主要用于服务器、存储等ICT产品。2019年12月31日，华为将EulerOS项目开源，并重新命名为openEuler，这标志着一个面向多样性计算的全新开源社区的诞生。2021年11月，华为将openEuler捐赠到开放原子开源基金会，进入产业共建阶段。如今，openEuler已经成为全球最具活力的操作系统开源社区之一，到2024年12月，openEuler的累计装机量突破1000万套，市场份额达36.8%（中国服务器市场），根据最新的（2025年7月）统计数据：openEuler的用户达到415万、贡献者2.2万、单位成员2073家。
-
-针对华为的开源商业案例，我们可以总结如下：务实的经营理念推动华为从封闭走向开放，坚定的战略执行为华为带来了丰硕的开源生态成果。
+Unlike Red Hat’s service-subscription model, PingCAP has pioneered a hybrid business approach of “open-source core + cloud services + ecosystem value-added offerings.” In 2023, it generated $35 million in revenue, up 94.4% year-on-year, with the Chinese market growing 100%. Overseas markets accounted for over 50% of revenue, making PingCAP the highest-grossing Chinese open-source software company. By 2024, its valuation reached $3 billion, establishing it as China’s largest open-source unicorn.
 
 
-## 总结
-通过对红帽、谷歌、PingCAP和华为这四个案例的分析，我们可以看到开源商业化并没有唯一的成功模板，不同的企业根据自身的特点和目标，走出了不同的道路。
+PingCAP’s success is built first and foremost on a strong foundation of open-source community management. TiDB has earned over 38,000 stars on GitHub and brings together nearly 900 contributors from around the world. This community-driven development model not only accelerates product iteration but also serves as a natural channel for customer education. PingCAP’s co-founder and CTO, Huang Dongxu, regards the open-source community as “the best customer acquisition engine”—through community discussions, the technical team can understand user needs, while the product’s quality and reputation spread organically among developers, significantly reducing the high customer acquisition costs typical of traditional enterprise software sales.
 
-开源商业化本质是“基于开放创新的价值重组”。无论是像红帽、PingCAP那样以开源为核心业务起家，还是像谷歌、华为那样将开源融入大厂战略，关键在于找到开源技术与企业自身资源和市场目标的契合点。同时，开源也是一把双刃剑，谷歌云市场份额相对落后也说明，即使是最懂开源的公司，如果忽视企业级服务的深层需求，也难以在B端市场复制其消费端的成功。未来，如何在开放协作与可持续盈利之间找到最佳平衡点，特别是对于寻求全球化发展和自主可控的中国开源力量来说，仍是持续探索的课题。开源的成功，最终不在于代码是否开放，而在于能否利用开放的力量创造独特的商业价值。
+Another strategic highlight of PingCAP is its dual-track approach to international and domestic markets. In its early stages, the company targeted Chinese Internet enterprises, with gaming company Gaia Interactive becoming its first paying customer. These high-concurrency, data-intensive scenarios provided an ideal environment to refine TiDB. As the product matured, PingCAP quickly expanded overseas, establishing a customer base in the U.S., Europe, Japan, and South Asia, with international revenue now surpassing domestic earnings.
+
+PingCAP has successfully carved out a position in the distributed database market through a model of “open-source–driven innovation, subscription-based revenue assurance, and cloud-service–driven market expansion.” Its core moat lies in technological leadership and a positive feedback loop within its community ecosystem, while future challenges will focus on deeper penetration into global markets and competitive displacement in traditional industries.
+
+PingCAP’s case demonstrates that open source is the most effective market entry strategy in the global foundational software sector. Through community-driven product iteration and a globally collaborative network, Chinese open-source companies are fully capable of achieving technological breakthroughs in core foundational software such as databases, transforming local innovation into global competitiveness. Its positive feedback loop of “product–community–commercialization” provides a replicable growth framework for the next generation of open-source enterprises.
+
+### Google: Leading the Open-Source Ecosystem
+
+Google, founded in 1998 and headquartered in Mountain View, California, is a leading global technology company. It employs over 180,000 people and operates in more than 150 countries worldwide. Its core businesses include search (Google Search), cloud computing (Google Cloud), open-source operating systems (Android), browsers (Chrome), AI frameworks (TensorFlow), and large models (Gemma). Notably, projects such as AOSP, Kubernetes, Chrome, and TensorFlow are among Google’s globally renowned open-source initiatives.
+
+From a business strategy perspective, Android is Google’s most successful open-source brand. While AOSP (Android Open Source Project) is the true open-source project and Android itself cannot be strictly considered open source, in the public mind, Android has become synonymous with open source. In practice, Google has successfully implemented an “open core + closed services” business model. On one hand, it uses open source to freely license device manufacturers, rapidly expanding its market and capturing share previously held by iOS. On the other hand, through GMS (Google Mobile Services), it provides closed, value-added services, tightly controlling the ecosystem and generating revenue from pre-installation licensing fees and ad sharing. According to reports, Android generated $31 billion in annual revenue for Google in 2016, of which $22 billion was net profit.
+
+In the browser arena, since 2005 Google has supported the open-source Mozilla Firefox, paying Mozilla roughly $400–450 million annually to ensure Google remains the default search engine on Firefox, thereby securing a closed traffic loop. On the other hand, Google ultimately decided to develop its own browser, Chrome, which gradually caught up with and eventually surpassed Firefox in market share, becoming the ultimate winner in the browser space. The logic behind this strategy remains rooted in traffic control and advertising revenue.
+
+In the cloud computing sector, Google’s open-source projects have also been impressive, yet they have failed to achieve the kind of success seen with its operating system or browser. According to Gartner, Google Cloud’s global market share was only 5.3% in 2019, compared with 45% for AWS and 17.9% for Azure. Even by 2025, Google Cloud’s share is expected to reach just 10–12%. The reasons behind this are quite revealing. Many analyses point to Google’s engineer-driven culture, which often overlooks enterprise pain points, as well as a structural lack of ToB (business-to-business) service capabilities as the primary cause. Additionally, critical missed acquisitions—GitHub and Red Hat, which were acquired by Microsoft and IBM respectively—and lagging channel development have also been key factors.
+
+In short, adopting an open-source strategy does not guarantee success, even for a tech giant like Google, which understands and leverages open source better than most.
+
+### Huawei: From Closed to Open Ecosystem
+
+Huawei was founded in 1987, but for a long time, it placed a strong emphasis on “information security,” particularly on protecting internal intellectual property and source code from leaks. Its approach to open source was cautious and conservative. It wasn’t until 2008 that Huawei established the Open Source Competence Center, aimed at standardizing the use and management of open-source software. According to The Open Source Mindset by Huawei’s Chief Open Source Officer, Ren Xudong, Huawei’s engagement with open source can be divided into four development stages.
+- Before 2009: Focused on the standardized use of open-source software, transitioning from spontaneous adoption to a more orderly approach. On top of ensuring compliance, greater attention was given to the security of open-source software.
+
+- 2010-2014：Marked by Huawei’s joining the Linux Foundation in 2010, this period saw active participation in open-source communities and the development of an open-source strategic management system. During this time, Huawei also joined key organizations such as the Apache Software Foundation, the OpenStack Foundation, and the Linaro Foundation, and in 2014 formally established a company-wide open-source strategy management framework.
+
+- 2015–2017: Continued to deepen open-source contributions, establish external open-source management systems and teams, and actively explore open-sourcing. In 2015, Huawei participated as a founding member in the establishment of the CNCF; in 2016, Huawei proactively open-sourced LiteOS, and in the following years, initiated and contributed to an increasing number of open-source projects.
+
+- 2018–Present: Maintained strong contributions, continuously optimized open-source processes, and accelerated the incubation of major open-source projects. Beyond the company’s own shift from closed to open practices, external pressures from the U.S. also played a significant role in prompting Huawei to embrace open source more proactively.
+
+
+The timeline of U.S. sanctions against Huawei is as follows: On June 7, 2018, the U.S. Congress urged Google to halt cooperation with Huawei. On May 15, 2019, then-President Donald Trump issued an executive order prohibiting the use of information and communication technologies and services from “adversary” countries, authorizing the U.S. Department of Commerce to enforce it. On the same day, the Department of Commerce and its Bureau of Industry and Security (BIS) announced specific measures to implement the order, adding Huawei to the Entity List. On May 19, 2019, Google removed Huawei devices from its Android upgrade list and announced the suspension of Google Mobile Services (GMS), including Google Play, Gmail, Google Maps, and other apps and services. On July 16, 2019, a bipartisan group of U.S. senators introduced 5G legislation that effectively blacklisted Huawei.
+
+By August 2019, Huawei officially unveiled its HarmonyOS at the Huawei Developer Conference. Building on this momentum, on June 15, 2020, with joint efforts from multiple parties—including Alibaba, Baidu, Huawei, Inspur, 360, Tencent, and China Merchants Bank—the OpenAtom Foundation was registered with the Ministry of Civil Affairs, becoming China’s first independent non-profit organization dedicated to promoting the open-source industry for public benefit. Later that year, on September 10, Huawei’s OpenHarmony operating system was open-sourced and donated to the OpenAtom Foundation.
+
+By January 31, 2025, the community had amassed over 8,200 contributors, 130 million lines of code, and 401 ecosystem partners, including 63 member organizations. Through continuous technological innovation and ecosystem development, the community has driven the creation of a full-scenario operating system, spanning key sectors such as finance, education, healthcare, transportation, and industry. On May 8, 2025, Huawei also officially launched the HarmonyOS-powered PC. Within just 15 hours of opening for pre-orders, over 50,000 people had reserved the MateBook Fold “Extraordinary Master” edition on Huawei’s online store.
+
+Another notable Huawei open-source project is openEuler. It originated from EulerOS, an internal operating system development project Huawei launched in 2010, primarily for servers, storage, and other ICT products. On December 31, 2019, Huawei open-sourced EulerOS and rebranded it as openEuler, marking the birth of a new open-source community aimed at diverse computing scenarios. In November 2021, Huawei contributed openEuler to the OpenAtom Foundation, entering a stage of industry-wide co-construction. Today, openEuler has grown into one of the most vibrant open-source OS communities globally. By December 2024, cumulative installations of openEuler exceeded 10 million, with a market share of 36.8% in China’s server market. According to the latest statistics (July 2025), openEuler now has 4.15 million users, 22,000 contributors, and 2,073 member organizations.
+
+For Huawei’s open-source business case, we can summarize as follows: a pragmatic business philosophy has guided Huawei from a closed approach to an open one, while resolute strategic execution has yielded a thriving open-source ecosystem.
+
+
+## Summary
+
+
+The cases of Red Hat, Google, PingCAP, and Huawei demonstrate that there’s no one-size-fits-all approach to open-source commercialization. Each company has forged its own path, shaped by its unique strengths and objectives.
+
+
+Open-source commercialization is essentially a “value reconfiguration driven by open innovation.” Whether a company starts with open source as its core business, like Red Hat or PingCAP, or integrates open source into a broader corporate strategy, like Google or Huawei, the key lies in aligning open-source technologies with the company’s own resources and market objectives. At the same time, open source is a double-edged sword. Google’s relatively modest cloud market share shows that even the companies that understand open source best can struggle in the B2B market if they overlook the deeper needs of enterprise services. Looking ahead, finding the optimal balance between open collaboration and sustainable profitability—especially for Chinese open-source initiatives pursuing globalization and technological self-reliance—remains an ongoing challenge. Ultimately, the success of open source does not depend on whether the code is open, but on whether the power of openness can be harnessed to create unique business value.
